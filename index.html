@@ -1,195 +1,302 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akkan Studio</title>
-<link rel="stylesheet" href="style.css">
-
-<style>
-/* Produktseksjon */
-.products {
-    padding: 80px 40px;
-    background: #050505;
-}
-
-.products h2 {
-    text-align: center;
-    margin-bottom: 60px;
-    font-size: 28px;
-    letter-spacing: 3px;
-    color: #c89b6b;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-}
-
-.card {
-    background: #0b0b0b;
-    border: 1px solid rgba(200,155,107,0.2);
-    padding: 20px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #c89b6b;
-}
-
-.card img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-.card h3 {
-    color: #c89b6b;
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 14px;
-    color: #aaa;
-    margin-bottom: 15px;
-}
-
-.unique {
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #777;
-    margin-bottom: 15px;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 1px solid #c89b6b;
-    color: #c89b6b;
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 2px;
-}
-
-.button:hover {
-    background: #c89b6b;
-    color: black;
-}
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akkan Studio | One of One Handcrafted Design Objects</title>
+  <meta name="description" content="Akkan Studio creates one-of-one handcrafted wooden design objects. Each piece exists only once." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<header>
-    <div class="logo">AKKAN STUDIO</div>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Collection</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
+<header class="site-header">
+  <div class="brand">AKKAN STUDIO</div>
+
+  <nav class="nav">
+    <a href="#collection" data-en="Collection" data-no="Kolleksjon" data-tr="Koleksiyon">Collection</a>
+    <a href="#about" data-en="About" data-no="Om oss" data-tr="Hakkında">About</a>
+    <a href="#process" data-en="Process" data-no="Prosess" data-tr="Süreç">Process</a>
+    <a href="#contact" data-en="Contact" data-no="Kontakt" data-tr="İletişim">Contact</a>
+  </nav>
+
+  <div class="languages">
+    <button onclick="setLanguage('en')">EN</button>
+    <button onclick="setLanguage('no')">NO</button>
+    <button onclick="setLanguage('tr')">TR</button>
+  </div>
 </header>
 
+<main>
+
 <section class="hero">
-    <h1>HANDCRAFTED DESIGN OBJECTS IN WOOD</h1>
-    <p>Each piece exists only once. Created with precision and intention.</p>
+  <div class="hero-text">
+    <p class="eyebrow"
+       data-en="One of One · Handcrafted in Wood"
+       data-no="Én av én · Håndlaget i tre"
+       data-tr="Tek ve benzersiz · Ahşap el işçiliği">
+       One of One · Handcrafted in Wood
+    </p>
+
+    <h1 data-en="Handcrafted design objects in wood"
+        data-no="Håndlagde designobjekter i tre"
+        data-tr="Ahşaptan el yapımı tasarım objeleri">
+        Handcrafted design objects in wood
+    </h1>
+
+    <p class="hero-lead"
+       data-en="Each object exists only once. No copies. No production line. Only unique pieces made by hand."
+       data-no="Hvert objekt finnes kun én gang. Ingen kopier. Ingen serieproduksjon. Kun unike arbeider laget for hånd."
+       data-tr="Her obje yalnızca bir kez yapılır. Kopya yok. Seri üretim yok. Sadece el yapımı benzersiz parçalar.">
+       Each object exists only once. No copies. No production line. Only unique pieces made by hand.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#collection" class="btn-primary"
+         data-en="View collection"
+         data-no="Se kolleksjon"
+         data-tr="Koleksiyonu gör">
+         View collection
+      </a>
+      <a href="#contact" class="btn-secondary"
+         data-en="Make an offer"
+         data-no="Gi bud"
+         data-tr="Teklif ver">
+         Make an offer
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/Truck in wood .jpg" alt="One of one handcrafted wooden truck by Akkan Studio">
+  </div>
 </section>
 
-<section class="products">
-    <h2>UNIQUE COLLECTION</h2>
+<section class="statement">
+  <h2 data-en="Not a shop. A collection of unique works."
+      data-no="Ikke en vanlig butikk. En samling unike arbeider."
+      data-tr="Bir mağaza değil. Benzersiz eserlerden oluşan bir koleksiyon.">
+      Not a shop. A collection of unique works.
+  </h2>
 
-```
-<div class="grid">
-
-    <div class="card">
-        <img src="images/backgammon.jpg">
-        <h3>Backgammon Heritage</h3>
-        <div class="unique">ONE OF ONE</div>
-        <p>Handcrafted wooden board with precision detailing.</p>
-        <a href="#" class="button">MAKE AN OFFER</a>
-    </div>
-
-    <div class="card">
-        <img src="Jewelry Box.jpg">
-        <h3>Geometric Jewelry Chest</h3>
-        <div class="unique">ONLY PIECE IN EXISTENCE</div>
-        <p>Carved structure with layered geometric depth.</p>
-        <a href="#" class="button">MAKE AN OFFER</a>
-    </div>
-
-    <div class="card">
-        <img src="Store Box.jpg">
-        <h3>Minimal Storage Box</h3>
-        <div class="unique">ONE OF ONE</div>
-        <p>Clean lines and warm wood tones.</p>
-        <a href="#" class="button">MAKE AN OFFER</a>
-    </div>
-
-    <div class="card">
-        <img src="Truck in wood.jpg">
-        <h3>Wood Transport Sculpture</h3>
-        <div class="unique">UNIQUE ART OBJECT</div>
-        <p>Functional craftsmanship meets artistic expression.</p>
-        <a href="#" class="button">MAKE AN OFFER</a>
-    </div>
-
-    <div class="card">
-        <img src="Wood Truck.JPG">
-        <h3>Classic Wooden Truck</h3>
-        <div class="unique">ONE OF ONE</div>
-        <p>Detailed handmade structure in solid wood.</p>
-        <a href="#" class="button">MAKE AN OFFER</a>
-    </div>
-
-    <div class="card">
-        <img src="Wall Clock 1.jpg">
-        <h3>Segment Clock I</h3>
-        <div class="unique">ONLY VERSION</div>
-        <p>Modern segmented design with strong visual identity.</p>
-        <a href="#" class="button">MAKE AN OFFER</a>
-    </div>
-
-    <div class="card">
-        <img src="Wall Clock 3.JPG">
-        <h3>Segment Clock II</h3>
-        <div class="unique">ONE OF ONE</div>
-        <p>Balanced geometry and handcrafted details.</p>
-        <a href="#" class="button">MAKE AN OFFER</a>
-    </div>
-
-    <div class="card">
-        <img src="Wall clock 2.JPG">
-        <h3>Rope Frame Clock</h3>
-        <div class="unique">UNIQUE PIECE</div>
-        <p>Combination of wood and rope elements.</p>
-        <a href="#" class="button">MAKE AN OFFER</a>
-    </div>
-
-    <div class="card">
-        <img src="Ceiling Lamp.jpg">
-        <h3>Floating Ring Lamp</h3>
-        <div class="unique">ONE OF ONE</div>
-        <p>Light sculpture with layered ring design.</p>
-        <a href="#" class="button">MAKE AN OFFER</a>
-    </div>
-
-    <div class="card">
-        <img src="Tea light Holders.JPG">
-        <h3>Tea Light Set</h3>
-        <div class="unique">ONLY SET</div>
-        <p>Warm wood candle holders in minimalist form.</p>
-        <a href="#" class="button">MAKE AN OFFER</a>
-    </div>
-
-</div>
-```
-
+  <p data-en="When a piece is sold, it is gone. New works may appear later, but the same object will not be reproduced."
+     data-no="Når et objekt er solgt, er det borte. Nye arbeider kan komme senere, men samme objekt blir ikke produsert på nytt."
+     data-tr="Bir parça satıldığında artık yoktur. Yeni eserler daha sonra gelebilir, ancak aynı obje tekrar üretilmez.">
+     When a piece is sold, it is gone. New works may appear later, but the same object will not be reproduced.
+  </p>
 </section>
+
+<section id="collection" class="collection">
+  <div class="section-heading">
+    <p data-en="Current works" data-no="Tilgjengelige arbeider" data-tr="Mevcut eserler">Current works</p>
+    <h2 data-en="Unique collection" data-no="Unik kolleksjon" data-tr="Benzersiz koleksiyon">Unique collection</h2>
+  </div>
+
+  <div class="product-grid">
+
+    <article class="product-card featured">
+      <img src="images/Truck in wood .jpg" alt="The Transporter">
+      <div class="product-info">
+        <span>OBJECT 001 · ONE OF ONE</span>
+        <h3>The Transporter</h3>
+        <p data-en="A sculptural wooden truck built as a statement piece for interiors. A work with presence, movement and character."
+           data-no="En skulpturell trelastebil laget som et blikkfang i interiør. Et objekt med nærvær, bevegelse og karakter."
+           data-tr="İç mekânlar için dikkat çekici bir ahşap kamyon heykeli. Varlığı, hareketi ve karakteri olan bir eser.">
+           A sculptural wooden truck built as a statement piece for interiors. A work with presence, movement and character.
+        </p>
+        <a href="#contact" class="small-link" data-en="Make an offer" data-no="Gi bud" data-tr="Teklif ver">Make an offer</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <img src="images/Back Gammon Game .jpg" alt="The Balance Game">
+      <div class="product-info">
+        <span>OBJECT 002 · ONE OF ONE</span>
+        <h3>The Balance Game</h3>
+        <p>A handcrafted backgammon board made as both game and interior object.</p>
+        <a href="#contact" class="small-link">Make an offer</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <img src="images/Ceiling Lamp.jpg" alt="The Ring Light">
+      <div class="product-info">
+        <span>OBJECT 003 · ONE OF ONE</span>
+        <h3>The Ring Light</h3>
+        <p>A sculptural ceiling lamp designed to create atmosphere and visual rhythm.</p>
+        <a href="#contact" class="small-link">Make an offer</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <img src="images/Jewelry Box .jpg" alt="The Private Chest">
+      <div class="product-info">
+        <span>OBJECT 004 · ONE OF ONE</span>
+        <h3>The Private Chest</h3>
+        <p>A geometric wooden chest with carved depth and warm brass-like detail.</p>
+        <a href="#contact" class="small-link">Make an offer</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <img src="images/Store Box .jpg" alt="The Archive Box">
+      <div class="product-info">
+        <span>OBJECT 005 · ONE OF ONE</span>
+        <h3>The Archive Box</h3>
+        <p>A handmade storage object with geometric pattern and personal character.</p>
+        <a href="#contact" class="small-link">Make an offer</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <img src="images/Table Lamp.jpg" alt="The Glow Object">
+      <div class="product-info">
+        <span>OBJECT 006 · ONE OF ONE</span>
+        <h3>The Glow Object</h3>
+        <p>A warm light object where wood and shadow create depth.</p>
+        <a href="#contact" class="small-link">Make an offer</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <img src="images/Table Lamp 2.JPG" alt="The Layered Lamp">
+      <div class="product-info">
+        <span>OBJECT 007 · ONE OF ONE</span>
+        <h3>The Layered Lamp</h3>
+        <p>A handcrafted light piece with stacked circular forms and warm glow.</p>
+        <a href="#contact" class="small-link">Make an offer</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <img src="images/Tea light Holders .JPG" alt="The Candle Set">
+      <div class="product-info">
+        <span>OBJECT 008 · ONE OF ONE</span>
+        <h3>The Candle Set</h3>
+        <p>Three solid wooden candle holders designed for calm interiors.</p>
+        <a href="#contact" class="small-link">Make an offer</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <img src="images/Wall Clock 1.jpg" alt="The Segment Clock">
+      <div class="product-info">
+        <span>OBJECT 009 · ONE OF ONE</span>
+        <h3>The Segment Clock</h3>
+        <p>A wall object that happens to show time. Strong geometry and contrast.</p>
+        <a href="#contact" class="small-link">Make an offer</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <img src="images/Wall clock 2.JPG" alt="The Rope Clock">
+      <div class="product-info">
+        <span>OBJECT 010 · ONE OF ONE</span>
+        <h3>The Rope Clock</h3>
+        <p>A wooden wall clock combining rope, depth and decorative structure.</p>
+        <a href="#contact" class="small-link">Make an offer</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <img src="images/Wall Clock 3.JPG" alt="The Brick Clock">
+      <div class="product-info">
+        <span>OBJECT 011 · ONE OF ONE</span>
+        <h3>The Brick Clock</h3>
+        <p>A warm wall sculpture with clock movement and brick-like wooden depth.</p>
+        <a href="#contact" class="small-link">Make an offer</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <img src="images/Wall clock 4 .JPG" alt="The Shield Clock">
+      <div class="product-info">
+        <span>OBJECT 012 · ONE OF ONE</span>
+        <h3>The Shield Clock</h3>
+        <p>A bold wooden clock with a shield-like frame and strong handmade presence.</p>
+        <a href="#contact" class="small-link">Make an offer</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <img src="images/Wood Truck.JPG" alt="The Classic Truck">
+      <div class="product-info">
+        <span>OBJECT 013 · ONE OF ONE</span>
+        <h3>The Classic Truck</h3>
+        <p>A smaller wooden truck object with handcrafted detail and warm form.</p>
+        <a href="#contact" class="small-link">Make an offer</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <img src="images/Wood truck 3 .JPG" alt="The Small Transport">
+      <div class="product-info">
+        <span>OBJECT 014 · ONE OF ONE</span>
+        <h3>The Small Transport</h3>
+        <p>A compact wooden truck piece made as a warm interior detail.</p>
+        <a href="#contact" class="small-link">Make an offer</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div>
+    <p class="eyebrow">ABOUT THE MAKER</p>
+    <h2>Handmade by Øzkan Akkan</h2>
+  </div>
+  <p>
+    Akkan Studio is built around unique handcrafted objects in wood. Each work is made by hand, with patience, detail and an intention to create something that cannot be found everywhere.
+  </p>
+</section>
+
+<section id="process" class="process">
+  <div class="section-heading">
+    <p>How it works</p>
+    <h2>Every piece is made once</h2>
+  </div>
+
+  <div class="process-grid">
+    <div>
+      <h3>01 · Created by hand</h3>
+      <p>No mass production. Every object is shaped, assembled and finished individually.</p>
+    </div>
+    <div>
+      <h3>02 · Presented as available</h3>
+      <p>Each object is published as part of the current collection.</p>
+    </div>
+    <div>
+      <h3>03 · Sold once</h3>
+      <p>When sold, the object is removed or marked as sold. The same piece will not be reproduced.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <p class="eyebrow">REQUEST / OFFER</p>
+  <h2>Interested in one of the objects?</h2>
+  <p>
+    Send a request with the object name. We will respond with availability, price level and shipping possibilities.
+  </p>
+  <a href="mailto:akkanstudio@byggsmartkompetanse.no?subject=Akkan Studio - Offer request" class="btn-primary">
+    Send request
+  </a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© Akkan Studio · One of One Handcrafted Design Objects</p>
+</footer>
+
+<script>
+function setLanguage(lang) {
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    el.textContent = el.getAttribute('data-' + lang);
+  });
+}
+</script>
 
 </body>
 </html>
