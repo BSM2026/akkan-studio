@@ -32,8 +32,8 @@ header {
 }
 
 .logo {
-    font-size: 32px;
-    letter-spacing: 8px;
+    font-size: 36px;
+    letter-spacing: 10px;
     color: var(--bronze-light);
     font-weight: 500;
 }
