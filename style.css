@@ -32,8 +32,9 @@ header {
 }
 
 .logo {
-    font-size: 36px;
-    letter-spacing: 10px;
+    font-family: "Georgia", serif;
+    font-size: 38px;
+    letter-spacing: 12px;
     color: var(--bronze-light);
     font-weight: 500;
 }
