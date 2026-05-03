@@ -1,305 +1,416 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Akkan Studio</title>
+  <title>Akkan Studio | One-of-One Objects</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#top" class="logo">AKKAN STUDIO</a>
 
-<header class="site-header">
-  <div class="brand">AKKAN STUDIO</div>
+      <nav class="main-nav">
+        <a href="#concept" data-i18n="navConcept">Konsept</a>
+        <a href="#objects" data-i18n="navObjects">Objekter</a>
+        <a href="#about" data-i18n="navAbout">Om oss</a>
+        <a href="#contact" data-i18n="navContact">Gi bud</a>
+      </nav>
 
-  <nav>
-    <a href="#top" data-en="Home" data-no="Hjem" data-tr="Ana sayfa">Home</a>
-    <a href="#collection" data-en="Collection" data-no="Kolleksjon" data-tr="Koleksiyon">Collection</a>
-    <a href="#about" data-en="About" data-no="Om oss" data-tr="Hakkında">About</a>
-    <a href="#contact" data-en="Contact" data-no="Kontakt" data-tr="İletişim">Contact</a>
-  </nav>
-
-  <div class="lang">
-    <button onclick="setLanguage('en')">EN</button>
-    <button onclick="setLanguage('no')">NO</button>
-    <button onclick="setLanguage('tr')">TR</button>
-  </div>
-</header>
-
-<section id="top" class="hero">
-  <div class="hero-copy">
-    <p class="label" data-en="ONE OF ONE" data-no="ÉN AV ÉN" data-tr="TEK VE BENZERSİZ">ONE OF ONE</p>
-
-    <h1
-      data-en="Handcrafted wooden objects. Only one of each."
-      data-no="Håndlagde treobjekter. Kun én av hver."
-      data-tr="El yapımı ahşap objeler. Her birinden yalnızca bir adet.">
-      Handcrafted wooden objects. Only one of each.
-    </h1>
-
-    <p class="lead"
-      data-en="Akkan Studio creates unique wooden design objects. No mass production. No copies. When a piece is sold, it will not be made again."
-      data-no="Akkan Studio lager unike designobjekter i tre. Ingen masseproduksjon. Ingen kopier. Når et objekt er solgt, blir det ikke laget på nytt."
-      data-tr="Akkan Studio benzersiz ahşap tasarım objeleri üretir. Seri üretim yok. Kopya yok. Bir parça satıldığında tekrar yapılmaz.">
-      Akkan Studio creates unique wooden design objects. No mass production. No copies. When a piece is sold, it will not be made again.
-    </p>
-
-    <div class="hero-buttons">
-      <a class="btn primary" href="#collection" data-en="View collection" data-no="Se kolleksjon" data-tr="Koleksiyonu gör">View collection</a>
-      <a class="btn secondary" href="#contact" data-en="Make an offer" data-no="Gi bud" data-tr="Teklif ver">Make an offer</a>
+      <div class="language-switch">
+        <button onclick="setLanguage('no')" class="lang-btn active" id="lang-no">NO</button>
+        <button onclick="setLanguage('en')" class="lang-btn" id="lang-en">EN</button>
+        <button onclick="setLanguage('tr')" class="lang-btn" id="lang-tr">TR</button>
+      </div>
     </div>
+  </header>
+
+  <main id="top">
+    <section class="hero-section">
+      <div class="hero-content">
+        <p class="eyebrow" data-i18n="eyebrow">One-of-one objects</p>
+
+        <h1 data-i18n="heroTitle">
+          Unike objekter. Kun én versjon. Aldri masseprodusert.
+        </h1>
+
+        <p class="hero-text" data-i18n="heroText">
+          Akkan Studio skaper og kuraterer særpregede interiørobjekter, kunstneriske møbler og dekorative elementer for mennesker som ønsker noe ingen andre har.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#objects" class="btn primary" data-i18n="seeObjects">Se objekter</a>
+          <a href="#contact" class="btn secondary" data-i18n="makeOffer">Gi bud</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="concept" class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="conceptEyebrow">Konseptet</p>
+        <h2 data-i18n="conceptTitle">Ikke en butikk. Et studio for unike objekter.</h2>
+      </div>
+
+      <div class="concept-grid">
+        <div class="concept-card">
+          <h3 data-i18n="conceptOneTitle">Kun én</h3>
+          <p data-i18n="conceptOneText">
+            Hvert objekt finnes kun i én versjon. Når det er solgt, kommer det ikke tilbake.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h3 data-i18n="conceptTwoTitle">Budbasert</h3>
+          <p data-i18n="conceptTwoText">
+            Prisene er utgangspriser. Interessenter kan gi bud, og objektet selges når riktig nivå er nådd.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <h3 data-i18n="conceptThreeTitle">Personlighet</h3>
+          <p data-i18n="conceptThreeText">
+            Objektene er valgt eller utviklet for rom som tåler karakter, kontrast og særpreg.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="objects" class="content-section objects-section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="objectsEyebrow">Objekter</p>
+        <h2 data-i18n="objectsTitle">Tilgjengelige one-of-one objekter</h2>
+        <p class="section-intro" data-i18n="objectsIntro">
+          Klikk på bildet for større visning. Prisene er utgangspriser.
+        </p>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section id="about" class="content-section about-section">
+      <div class="about-wrapper">
+        <div>
+          <p class="eyebrow" data-i18n="aboutEyebrow">Om Akkan Studio</p>
+          <h2 data-i18n="aboutTitle">Et lite studio med fokus på uttrykk, materialitet og særpreg.</h2>
+        </div>
+
+        <p data-i18n="aboutText">
+          Akkan Studio arbeider med objekter som skiller seg fra standard interiørprodukter. Målet er ikke volum, men å tilby enkeltstående objekter med tydelig identitet. Hvert objekt vurderes som et selvstendig uttrykk, ikke som del av en masseprodusert kolleksjon.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="content-section contact-section">
+      <div class="contact-box">
+        <p class="eyebrow" data-i18n="contactEyebrow">Bud / interesse</p>
+        <h2 data-i18n="contactTitle">Interessert i et objekt?</h2>
+
+        <p data-i18n="contactText">
+          Send oss hvilket objekt du er interessert i, ønsket bud og kontaktinformasjon. Vi tar kontakt dersom budet vurderes som aktuelt.
+        </p>
+
+        <a href="mailto:post@akkanstudio.com?subject=Bud%20på%20Akkan%20Studio%20objekt" class="btn primary" data-i18n="contactButton">
+          Send bud
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Akkan Studio. One-of-one objects.</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <img id="lightboxImage" src="" alt="Akkan Studio object full view" />
   </div>
 
-  <div class="hero-photo">
-    <img src="images/Truck in wood .jpg" alt="Akkan Studio wooden truck">
-  </div>
-</section>
+  <script>
+    const currencyRates = {
+      no: {
+        currency: "NOK",
+        convert: (nok) => nok,
+        format: (value) => `${Math.round(value).toLocaleString("no-NO")} kr`
+      },
+      en: {
+        currency: "EUR",
+        convert: (nok) => nok / 10.88,
+        format: (value) => `€${Math.round(value).toLocaleString("en-US")}`
+      },
+      tr: {
+        currency: "TRY",
+        convert: (nok) => nok * 5,
+        format: (value) => `${Math.round(value).toLocaleString("tr-TR")} TL`
+      }
+    };
 
-<section class="intro">
-  <h2
-    data-en="This is not a normal shop."
-    data-no="Dette er ikke en vanlig butikk."
-    data-tr="Bu sıradan bir mağaza değildir.">
-    This is not a normal shop.
-  </h2>
+    let currentLanguage = "no";
 
-  <p
-    data-en="Every object is handmade and exists only once. The prices below are starting prices. If you are interested in a piece, send a request or make an offer."
-    data-no="Hvert objekt er håndlaget og finnes kun én gang. Prisene under er utgangspriser. Hvis du er interessert i et objekt, kan du sende forespørsel eller gi bud."
-    data-tr="Her obje el yapımıdır ve yalnızca bir kez vardır. Aşağıdaki fiyatlar başlangıç fiyatlarıdır. Bir parça ile ilgileniyorsanız istek gönderebilir veya teklif verebilirsiniz.">
-    Every object is handmade and exists only once. The prices below are starting prices. If you are interested in a piece, send a request or make an offer.
-  </p>
-</section>
+    const products = [
+      {
+        title: {
+          no: "Skulpturelt objekt 01",
+          en: "Sculptural Object 01",
+          tr: "Heykelsi Obje 01"
+        },
+        description: {
+          no: "Et markant one-of-one objekt med tydelig form og sterk visuell tilstedeværelse.",
+          en: "A distinctive one-of-one object with a strong form and visual presence.",
+          tr: "Güçlü forma ve belirgin görsel etkiye sahip tekil bir obje."
+        },
+        priceNok: 1900,
+        image: "/images/produkt 1.jpg"
+      },
+      {
+        title: {
+          no: "Dekorativt objekt 02",
+          en: "Decorative Object 02",
+          tr: "Dekoratif Obje 02"
+        },
+        description: {
+          no: "Et unikt interiørobjekt for rom som trenger karakter og varme.",
+          en: "A unique interior object for spaces that need character and warmth.",
+          tr: "Karakter ve sıcaklık isteyen mekânlar için benzersiz bir obje."
+        },
+        priceNok: 2900,
+        image: "/images/produkt 2.jpg"
+      },
+      {
+        title: {
+          no: "Statement piece 03",
+          en: "Statement Piece 03",
+          tr: "Dikkat Çeken Parça 03"
+        },
+        description: {
+          no: "Et objekt laget for å være et visuelt midtpunkt i rommet.",
+          en: "An object designed to become a visual focal point in the room.",
+          tr: "Mekânda görsel odak noktası olması için seçilmiş özel bir parça."
+        },
+        priceNok: 4900,
+        image: "/images/produkt 3.jpg"
+      },
+      {
+        title: {
+          no: "Kunstobjekt 04",
+          en: "Art Object 04",
+          tr: "Sanat Objesi 04"
+        },
+        description: {
+          no: "Et særpreget objekt med kunstnerisk preg og sterk materialfølelse.",
+          en: "A distinctive object with an artistic character and strong material presence.",
+          tr: "Sanatsal karaktere ve güçlü malzeme hissine sahip özel bir obje."
+        },
+        priceNok: 6900,
+        image: "/images/produkt 4.jpg"
+      },
+      {
+        title: {
+          no: "Interiørobjekt 05",
+          en: "Interior Object 05",
+          tr: "İç Mekân Objesi 05"
+        },
+        description: {
+          no: "Et eksklusivt enkeltobjekt for private hjem, studio eller gallerirom.",
+          en: "An exclusive single object for private homes, studios or gallery spaces.",
+          tr: "Ev, stüdyo veya galeri alanları için özel tekil bir obje."
+        },
+        priceNok: 9900,
+        image: "/images/produkt 5.jpg"
+      },
+      {
+        title: {
+          no: "Samlerobjekt 06",
+          en: "Collector Object 06",
+          tr: "Koleksiyon Objesi 06"
+        },
+        description: {
+          no: "Et one-of-one objekt med høyere utgangspris og tydelig samlerpreg.",
+          en: "A one-of-one object with a higher starting price and clear collector appeal.",
+          tr: "Daha yüksek başlangıç fiyatına sahip, koleksiyon değeri taşıyan tekil obje."
+        },
+        priceNok: 14900,
+        image: "/images/produkt 6.jpg"
+      }
+    ];
 
-<section id="collection" class="collection">
-  <div class="section-title">
-    <p data-en="CURRENT COLLECTION" data-no="AKTUELL KOLLEKSJON" data-tr="MEVCUT KOLEKSİYON">CURRENT COLLECTION</p>
-    <h2 data-en="Available one-of-one objects" data-no="Tilgjengelige unike objekter" data-tr="Mevcut benzersiz objeler">Available one-of-one objects</h2>
-  </div>
+    const translations = {
+      no: {
+        navConcept: "Konsept",
+        navObjects: "Objekter",
+        navAbout: "Om oss",
+        navContact: "Gi bud",
+        eyebrow: "One-of-one objects",
+        heroTitle: "Unike objekter. Kun én versjon. Aldri masseprodusert.",
+        heroText: "Akkan Studio skaper og kuraterer særpregede interiørobjekter, kunstneriske møbler og dekorative elementer for mennesker som ønsker noe ingen andre har.",
+        seeObjects: "Se objekter",
+        makeOffer: "Gi bud",
+        conceptEyebrow: "Konseptet",
+        conceptTitle: "Ikke en butikk. Et studio for unike objekter.",
+        conceptOneTitle: "Kun én",
+        conceptOneText: "Hvert objekt finnes kun i én versjon. Når det er solgt, kommer det ikke tilbake.",
+        conceptTwoTitle: "Budbasert",
+        conceptTwoText: "Prisene er utgangspriser. Interessenter kan gi bud, og objektet selges når riktig nivå er nådd.",
+        conceptThreeTitle: "Personlighet",
+        conceptThreeText: "Objektene er valgt eller utviklet for rom som tåler karakter, kontrast og særpreg.",
+        objectsEyebrow: "Objekter",
+        objectsTitle: "Tilgjengelige one-of-one objekter",
+        objectsIntro: "Klikk på bildet for større visning. Prisene er utgangspriser.",
+        fromPrice: "Utgangspris",
+        offerButton: "Gi bud",
+        aboutEyebrow: "Om Akkan Studio",
+        aboutTitle: "Et lite studio med fokus på uttrykk, materialitet og særpreg.",
+        aboutText: "Akkan Studio arbeider med objekter som skiller seg fra standard interiørprodukter. Målet er ikke volum, men å tilby enkeltstående objekter med tydelig identitet. Hvert objekt vurderes som et selvstendig uttrykk, ikke som del av en masseprodusert kolleksjon.",
+        contactEyebrow: "Bud / interesse",
+        contactTitle: "Interessert i et objekt?",
+        contactText: "Send oss hvilket objekt du er interessert i, ønsket bud og kontaktinformasjon. Vi tar kontakt dersom budet vurderes som aktuelt.",
+        contactButton: "Send bud"
+      },
+      en: {
+        navConcept: "Concept",
+        navObjects: "Objects",
+        navAbout: "About",
+        navContact: "Make offer",
+        eyebrow: "One-of-one objects",
+        heroTitle: "Unique objects. Only one version. Never mass-produced.",
+        heroText: "Akkan Studio creates and curates distinctive interior objects, artistic furniture and decorative pieces for people who want something no one else has.",
+        seeObjects: "View objects",
+        makeOffer: "Make offer",
+        conceptEyebrow: "The concept",
+        conceptTitle: "Not a store. A studio for unique objects.",
+        conceptOneTitle: "Only one",
+        conceptOneText: "Each object exists in only one version. Once sold, it will not return.",
+        conceptTwoTitle: "Offer-based",
+        conceptTwoText: "Prices are starting prices. Interested buyers may place offers, and the object is sold when the right level is reached.",
+        conceptThreeTitle: "Character",
+        conceptThreeText: "The objects are selected or developed for spaces that can carry character, contrast and individuality.",
+        objectsEyebrow: "Objects",
+        objectsTitle: "Available one-of-one objects",
+        objectsIntro: "Click the image for full view. Prices are starting prices.",
+        fromPrice: "Starting price",
+        offerButton: "Make offer",
+        aboutEyebrow: "About Akkan Studio",
+        aboutTitle: "A small studio focused on expression, materiality and individuality.",
+        aboutText: "Akkan Studio works with objects that differ from standard interior products. The goal is not volume, but to offer individual objects with a clear identity. Each object is treated as an independent expression, not part of a mass-produced collection.",
+        contactEyebrow: "Offer / interest",
+        contactTitle: "Interested in an object?",
+        contactText: "Send us which object you are interested in, your offer and contact details. We will contact you if the offer is considered relevant.",
+        contactButton: "Send offer"
+      },
+      tr: {
+        navConcept: "Konsept",
+        navObjects: "Objeler",
+        navAbout: "Hakkımızda",
+        navContact: "Teklif ver",
+        eyebrow: "Tekil objeler",
+        heroTitle: "Benzersiz objeler. Sadece bir adet. Seri üretim değil.",
+        heroText: "Akkan Studio, kimsenin sahip olmadığı özel parçalar isteyen kişiler için karakterli iç mekân objeleri, sanatsal mobilyalar ve dekoratif parçalar oluşturur ve seçer.",
+        seeObjects: "Objeleri gör",
+        makeOffer: "Teklif ver",
+        conceptEyebrow: "Konsept",
+        conceptTitle: "Bir mağaza değil. Benzersiz objeler için bir stüdyo.",
+        conceptOneTitle: "Sadece bir",
+        conceptOneText: "Her obje sadece bir adet bulunur. Satıldığında tekrar üretilmez.",
+        conceptTwoTitle: "Teklif sistemi",
+        conceptTwoText: "Fiyatlar başlangıç fiyatıdır. İlgilenen kişiler teklif verebilir ve obje uygun seviyeye ulaştığında satılır.",
+        conceptThreeTitle: "Karakter",
+        conceptThreeText: "Objeler; karakter, kontrast ve özgünlük taşıyabilen mekânlar için seçilir veya geliştirilir.",
+        objectsEyebrow: "Objeler",
+        objectsTitle: "Mevcut tekil objeler",
+        objectsIntro: "Büyük görüntü için görsele tıklayın. Fiyatlar başlangıç fiyatıdır.",
+        fromPrice: "Başlangıç fiyatı",
+        offerButton: "Teklif ver",
+        aboutEyebrow: "Akkan Studio hakkında",
+        aboutTitle: "İfade, malzeme ve özgünlüğe odaklanan küçük bir stüdyo.",
+        aboutText: "Akkan Studio, standart iç mekân ürünlerinden ayrılan objelerle çalışır. Amaç hacim değil, güçlü kimliğe sahip tekil objeler sunmaktır. Her obje, seri üretim bir koleksiyonun parçası değil, bağımsız bir ifade olarak değerlendirilir.",
+        contactEyebrow: "Teklif / ilgi",
+        contactTitle: "Bir obje ile ilgileniyor musunuz?",
+        contactText: "İlgilendiğiniz objeyi, teklifinizi ve iletişim bilgilerinizi gönderin. Teklif uygun görülürse sizinle iletişime geçeriz.",
+        contactButton: "Teklif gönder"
+      }
+    };
 
-  <div class="grid">
+    function setLanguage(lang) {
+      currentLanguage = lang;
+      document.documentElement.lang = lang;
 
-    <article class="card big">
-      <img src="images/Truck in wood .jpg" alt="">
-      <div>
-        <span data-en="OBJECT 001 · ONE OF ONE" data-no="OBJEKT 001 · ÉN AV ÉN" data-tr="OBJE 001 · TEK PARÇA">OBJECT 001 · ONE OF ONE</span>
-        <h3 data-en="The Transporter" data-no="Transportøren" data-tr="Taşıyıcı">The Transporter</h3>
-        <p data-en="A large wooden truck sculpture and statement piece for interiors."
-           data-no="En stor trelastebil laget som skulpturelt interiørobjekt."
-           data-tr="İç mekânlar için büyük bir ahşap kamyon heykeli.">A large wooden truck sculpture and statement piece for interiors.</p>
-        <strong data-en="Starting price: NOK 24,900" data-no="Utgangspris: 24 900 kr" data-tr="Başlangıç fiyatı: 24.900 NOK">Starting price: NOK 24,900</strong>
-        <a href="#contact" data-en="Make an offer" data-no="Gi bud" data-tr="Teklif ver">Make an offer</a>
-      </div>
-    </article>
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+        if (translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
 
-    <article class="card">
-      <img src="images/Back Gammon Game .jpg" alt="">
-      <div>
-        <span data-en="OBJECT 002 · ONE OF ONE" data-no="OBJEKT 002 · ÉN AV ÉN" data-tr="OBJE 002 · TEK PARÇA">OBJECT 002 · ONE OF ONE</span>
-        <h3 data-en="The Balance Game" data-no="Balansespillet" data-tr="Denge Oyunu">The Balance Game</h3>
-        <p data-en="Handcrafted backgammon board for play and display."
-           data-no="Håndlaget backgammonbrett for spill og dekor."
-           data-tr="Oyun ve dekor için el yapımı tavla tahtası.">Handcrafted backgammon board for play and display.</p>
-        <strong data-en="Starting price: NOK 7,900" data-no="Utgangspris: 7 900 kr" data-tr="Başlangıç fiyatı: 7.900 NOK">Starting price: NOK 7,900</strong>
-        <a href="#contact" data-en="Make an offer" data-no="Gi bud" data-tr="Teklif ver">Make an offer</a>
-      </div>
-    </article>
+      document.querySelectorAll(".lang-btn").forEach((btn) => {
+        btn.classList.remove("active");
+      });
 
-    <article class="card">
-      <img src="images/Ceiling Lamp.jpg" alt="">
-      <div>
-        <span data-en="OBJECT 003 · ONE OF ONE" data-no="OBJEKT 003 · ÉN AV ÉN" data-tr="OBJE 003 · TEK PARÇA">OBJECT 003 · ONE OF ONE</span>
-        <h3 data-en="The Ring Light" data-no="Ringlampen" data-tr="Halka Işık">The Ring Light</h3>
-        <p data-en="A sculptural ceiling lamp built around rhythm and warm light."
-           data-no="En skulpturell taklampe bygget rundt rytme og varmt lys."
-           data-tr="Ritim ve sıcak ışık üzerine tasarlanmış heykelsi tavan lambası.">A sculptural ceiling lamp built around rhythm and warm light.</p>
-        <strong data-en="Starting price: NOK 8,900" data-no="Utgangspris: 8 900 kr" data-tr="Başlangıç fiyatı: 8.900 NOK">Starting price: NOK 8,900</strong>
-        <a href="#contact" data-en="Make an offer" data-no="Gi bud" data-tr="Teklif ver">Make an offer</a>
-      </div>
-    </article>
+      document.getElementById(`lang-${lang}`).classList.add("active");
 
-    <article class="card">
-      <img src="images/Jewelry Box .jpg" alt="">
-      <div>
-        <span data-en="OBJECT 004 · ONE OF ONE" data-no="OBJEKT 004 · ÉN AV ÉN" data-tr="OBJE 004 · TEK PARÇA">OBJECT 004 · ONE OF ONE</span>
-        <h3 data-en="The Private Chest" data-no="Privatskrinet" data-tr="Özel Sandık">The Private Chest</h3>
-        <p data-en="A geometric wooden chest with depth, detail and presence."
-           data-no="Et geometrisk treskrin med dybde, detaljer og nærvær."
-           data-tr="Derinlik, detay ve karakter taşıyan geometrik ahşap sandık.">A geometric wooden chest with depth, detail and presence.</p>
-        <strong data-en="Starting price: NOK 6,900" data-no="Utgangspris: 6 900 kr" data-tr="Başlangıç fiyatı: 6.900 NOK">Starting price: NOK 6,900</strong>
-        <a href="#contact" data-en="Make an offer" data-no="Gi bud" data-tr="Teklif ver">Make an offer</a>
-      </div>
-    </article>
+      renderProducts();
+    }
 
-    <article class="card">
-      <img src="images/Store Box .jpg" alt="">
-      <div>
-        <span data-en="OBJECT 005 · ONE OF ONE" data-no="OBJEKT 005 · ÉN AV ÉN" data-tr="OBJE 005 · TEK PARÇA">OBJECT 005 · ONE OF ONE</span>
-        <h3 data-en="The Archive Box" data-no="Arkivboksen" data-tr="Arşiv Kutusu">The Archive Box</h3>
-        <p data-en="A warm handmade storage object with decorative pattern."
-           data-no="Et varmt håndlaget oppbevaringsobjekt med dekorativt mønster."
-           data-tr="Dekoratif desenli sıcak el yapımı saklama objesi.">A warm handmade storage object with decorative pattern.</p>
-        <strong data-en="Starting price: NOK 4,900" data-no="Utgangspris: 4 900 kr" data-tr="Başlangıç fiyatı: 4.900 NOK">Starting price: NOK 4,900</strong>
-        <a href="#contact" data-en="Make an offer" data-no="Gi bud" data-tr="Teklif ver">Make an offer</a>
-      </div>
-    </article>
+    function renderProducts() {
+      const grid = document.getElementById("productGrid");
+      grid.innerHTML = "";
 
-    <article class="card">
-      <img src="images/Table Lamp.jpg" alt="">
-      <div>
-        <span data-en="OBJECT 006 · ONE OF ONE" data-no="OBJEKT 006 · ÉN AV ÉN" data-tr="OBJE 006 · TEK PARÇA">OBJECT 006 · ONE OF ONE</span>
-        <h3 data-en="The Glow Object" data-no="Glødobjektet" data-tr="Işık Objeleri">The Glow Object</h3>
-        <p data-en="A warm table light where shadow and wood work together."
-           data-no="En varm bordlampe der skygge og treverk spiller sammen."
-           data-tr="Gölge ve ahşabın birlikte çalıştığı sıcak masa ışığı.">A warm table light where shadow and wood work together.</p>
-        <strong data-en="Starting price: NOK 4,900" data-no="Utgangspris: 4 900 kr" data-tr="Başlangıç fiyatı: 4.900 NOK">Starting price: NOK 4,900</strong>
-        <a href="#contact" data-en="Make an offer" data-no="Gi bud" data-tr="Teklif ver">Make an offer</a>
-      </div>
-    </article>
+      products.forEach((product) => {
+        const rate = currencyRates[currentLanguage];
+        const convertedPrice = rate.convert(product.priceNok);
+        const formattedPrice = rate.format(convertedPrice);
 
-    <article class="card">
-      <img src="images/Table Lamp 2.JPG" alt="">
-      <div>
-        <span data-en="OBJECT 007 · ONE OF ONE" data-no="OBJEKT 007 · ÉN AV ÉN" data-tr="OBJE 007 · TEK PARÇA">OBJECT 007 · ONE OF ONE</span>
-        <h3 data-en="The Layered Lamp" data-no="Laglampen" data-tr="Katmanlı Lamba">The Layered Lamp</h3>
-        <p data-en="A layered light object with circular forms and warm atmosphere."
-           data-no="Et lagdelt lysobjekt med runde former og varm atmosfære."
-           data-tr="Dairesel formlar ve sıcak atmosfer taşıyan katmanlı ışık objesi.">A layered light object with circular forms and warm atmosphere.</p>
-        <strong data-en="Starting price: NOK 5,900" data-no="Utgangspris: 5 900 kr" data-tr="Başlangıç fiyatı: 5.900 NOK">Starting price: NOK 5,900</strong>
-        <a href="#contact" data-en="Make an offer" data-no="Gi bud" data-tr="Teklif ver">Make an offer</a>
-      </div>
-    </article>
+        const card = document.createElement("article");
+        card.className = "product-card";
 
-    <article class="card">
-      <img src="images/Tea light Holders .JPG" alt="">
-      <div>
-        <span data-en="OBJECT 008 · ONE OF ONE" data-no="OBJEKT 008 · ÉN AV ÉN" data-tr="OBJE 008 · TEK PARÇA">OBJECT 008 · ONE OF ONE</span>
-        <h3 data-en="The Candle Set" data-no="Lyssettet" data-tr="Mum Seti">The Candle Set</h3>
-        <p data-en="Three solid wooden candle holders for calm interiors."
-           data-no="Tre solide lysestaker i tre for rolige interiør."
-           data-tr="Sakin iç mekânlar için üç masif ahşap mumluk.">Three solid wooden candle holders for calm interiors.</p>
-        <strong data-en="Starting price: NOK 2,900" data-no="Utgangspris: 2 900 kr" data-tr="Başlangıç fiyatı: 2.900 NOK">Starting price: NOK 2,900</strong>
-        <a href="#contact" data-en="Make an offer" data-no="Gi bud" data-tr="Teklif ver">Make an offer</a>
-      </div>
-    </article>
+        card.innerHTML = `
+          <div class="product-image-wrap" onclick="openLightbox('${product.image}')">
+            <img src="${product.image}" alt="${product.title[currentLanguage]}" class="product-image" />
+          </div>
 
-    <article class="card">
-      <img src="images/Wall Clock 1.jpg" alt="">
-      <div>
-        <span data-en="OBJECT 009 · ONE OF ONE" data-no="OBJEKT 009 · ÉN AV ÉN" data-tr="OBJE 009 · TEK PARÇA">OBJECT 009 · ONE OF ONE</span>
-        <h3 data-en="The Segment Clock" data-no="Segmentklokken" data-tr="Segment Saat">The Segment Clock</h3>
-        <p data-en="A bold wall object that also tells time."
-           data-no="Et tydelig veggobjekt som også viser tiden."
-           data-tr="Zamanı da gösteren güçlü bir duvar objesi.">A bold wall object that also tells time.</p>
-        <strong data-en="Starting price: NOK 5,900" data-no="Utgangspris: 5 900 kr" data-tr="Başlangıç fiyatı: 5.900 NOK">Starting price: NOK 5,900</strong>
-        <a href="#contact" data-en="Make an offer" data-no="Gi bud" data-tr="Teklif ver">Make an offer</a>
-      </div>
-    </article>
+          <div class="product-content">
+            <h3>${product.title[currentLanguage]}</h3>
+            <p>${product.description[currentLanguage]}</p>
 
-    <article class="card">
-      <img src="images/Wall clock 2.JPG" alt="">
-      <div>
-        <span data-en="OBJECT 010 · ONE OF ONE" data-no="OBJEKT 010 · ÉN AV ÉN" data-tr="OBJE 010 · TEK PARÇA">OBJECT 010 · ONE OF ONE</span>
-        <h3 data-en="The Rope Clock" data-no="Tauklokken" data-tr="Halat Saat">The Rope Clock</h3>
-        <p data-en="Wood, rope and strong geometry in one wall object."
-           data-no="Tre, tau og tydelig geometri i ett veggobjekt."
-           data-tr="Ahşap, halat ve güçlü geometri tek bir duvar objesinde.">Wood, rope and strong geometry in one wall object.</p>
-        <strong data-en="Starting price: NOK 6,900" data-no="Utgangspris: 6 900 kr" data-tr="Başlangıç fiyatı: 6.900 NOK">Starting price: NOK 6,900</strong>
-        <a href="#contact" data-en="Make an offer" data-no="Gi bud" data-tr="Teklif ver">Make an offer</a>
-      </div>
-    </article>
+            <div class="product-meta">
+              <span>${translations[currentLanguage].fromPrice}</span>
+              <strong>${formattedPrice}</strong>
+            </div>
 
-    <article class="card">
-      <img src="images/Wall Clock 3.JPG" alt="">
-      <div>
-        <span data-en="OBJECT 011 · ONE OF ONE" data-no="OBJEKT 011 · ÉN AV ÉN" data-tr="OBJE 011 · TEK PARÇA">OBJECT 011 · ONE OF ONE</span>
-        <h3 data-en="The Brick Clock" data-no="Murklokken" data-tr="Tuğla Saat">The Brick Clock</h3>
-        <p data-en="A wooden wall sculpture with clock movement."
-           data-no="En treskulptur til vegg med urverk."
-           data-tr="Saat mekanizmalı ahşap duvar heykeli.">A wooden wall sculpture with clock movement.</p>
-        <strong data-en="Starting price: NOK 7,900" data-no="Utgangspris: 7 900 kr" data-tr="Başlangıç fiyatı: 7.900 NOK">Starting price: NOK 7,900</strong>
-        <a href="#contact" data-en="Make an offer" data-no="Gi bud" data-tr="Teklif ver">Make an offer</a>
-      </div>
-    </article>
+            <a href="mailto:post@akkanstudio.com?subject=${encodeURIComponent(translations[currentLanguage].offerButton + ' - ' + product.title[currentLanguage])}" class="product-offer-btn">
+              ${translations[currentLanguage].offerButton}
+            </a>
+          </div>
+        `;
 
-    <article class="card">
-      <img src="images/Wall clock 4 .JPG" alt="">
-      <div>
-        <span data-en="OBJECT 012 · ONE OF ONE" data-no="OBJEKT 012 · ÉN AV ÉN" data-tr="OBJE 012 · TEK PARÇA">OBJECT 012 · ONE OF ONE</span>
-        <h3 data-en="The Shield Clock" data-no="Skjoldklokken" data-tr="Kalkan Saat">The Shield Clock</h3>
-        <p data-en="A strong wooden clock with shield-like structure."
-           data-no="En kraftig treklokke med skjoldformet uttrykk."
-           data-tr="Kalkan formuna sahip güçlü ahşap saat.">A strong wooden clock with shield-like structure.</p>
-        <strong data-en="Starting price: NOK 6,900" data-no="Utgangspris: 6 900 kr" data-tr="Başlangıç fiyatı: 6.900 NOK">Starting price: NOK 6,900</strong>
-        <a href="#contact" data-en="Make an offer" data-no="Gi bud" data-tr="Teklif ver">Make an offer</a>
-      </div>
-    </article>
+        grid.appendChild(card);
+      });
+    }
 
-    <article class="card">
-      <img src="images/Wood Truck .JPG" alt="">
-      <div>
-        <span data-en="OBJECT 013 · ONE OF ONE" data-no="OBJEKT 013 · ÉN AV ÉN" data-tr="OBJE 013 · TEK PARÇA">OBJECT 013 · ONE OF ONE</span>
-        <h3 data-en="The Classic Truck" data-no="Den klassiske lastebilen" data-tr="Klasik Kamyon">The Classic Truck</h3>
-        <p data-en="A smaller handcrafted wooden truck with warm character."
-           data-no="En mindre håndlaget trelastebil med varmt uttrykk."
-           data-tr="Sıcak karaktere sahip küçük el yapımı ahşap kamyon.">A smaller handcrafted wooden truck with warm character.</p>
-        <strong data-en="Starting price: NOK 12,900" data-no="Utgangspris: 12 900 kr" data-tr="Başlangıç fiyatı: 12.900 NOK">Starting price: NOK 12,900</strong>
-        <a href="#contact" data-en="Make an offer" data-no="Gi bud" data-tr="Teklif ver">Make an offer</a>
-      </div>
-    </article>
+    function openLightbox(imageSrc) {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightboxImage");
 
-    <article class="card">
-      <img src="images/Wood truck 3 .JPG" alt="">
-      <div>
-        <span data-en="OBJECT 014 · ONE OF ONE" data-no="OBJEKT 014 · ÉN AV ÉN" data-tr="OBJE 014 · TEK PARÇA">OBJECT 014 · ONE OF ONE</span>
-        <h3 data-en="The Small Transport" data-no="Den lille transportøren" data-tr="Küçük Taşıyıcı">The Small Transport</h3>
-        <p data-en="A compact wooden truck piece for display."
-           data-no="Et kompakt treobjekt laget for utstilling."
-           data-tr="Sergileme için kompakt ahşap kamyon objesi.">A compact wooden truck piece for display.</p>
-        <strong data-en="Starting price: NOK 8,900" data-no="Utgangspris: 8 900 kr" data-tr="Başlangıç fiyatı: 8.900 NOK">Starting price: NOK 8,900</strong>
-        <a href="#contact" data-en="Make an offer" data-no="Gi bud" data-tr="Teklif ver">Make an offer</a>
-      </div>
-    </article>
+      lightboxImage.src = imageSrc;
+      lightbox.classList.add("active");
+      document.body.classList.add("no-scroll");
+    }
 
-  </div>
-</section>
+    function closeLightbox() {
+      const lightbox = document.getElementById("lightbox");
+      lightbox.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    }
 
-<section id="about" class="about">
-  <h2 data-en="About Akkan Studio" data-no="Om Akkan Studio" data-tr="Akkan Studio Hakkında">About Akkan Studio</h2>
-  <p
-    data-en="Akkan Studio is built around unique handcrafted wooden objects created by Øzkan Akkan. The concept is simple: one maker, one object, one version. The work sits between craft, interior design and functional art."
-    data-no="Akkan Studio er bygget rundt unike håndlagde treobjekter laget av Øzkan Akkan. Konseptet er enkelt: én håndverker, ett objekt, én versjon. Arbeidene ligger mellom håndverk, interiørdesign og funksjonell kunst."
-    data-tr="Akkan Studio, Øzkan Akkan tarafından yapılan benzersiz el yapımı ahşap objeler üzerine kuruludur. Konsept basittir: bir usta, bir obje, bir versiyon. Çalışmalar el işçiliği, iç tasarım ve işlevsel sanat arasında yer alır.">
-    Akkan Studio is built around unique handcrafted wooden objects created by Øzkan Akkan. The concept is simple: one maker, one object, one version. The work sits between craft, interior design and functional art.
-  </p>
-</section>
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+    });
 
-<section id="contact" class="contact">
-  <h2 data-en="Request availability or make an offer" data-no="Spør om tilgjengelighet eller gi bud" data-tr="Uygunluk sorun veya teklif verin">Request availability or make an offer</h2>
-  <p
-    data-en="Send us the object number or name. We will reply with availability, transport options and the next step."
-    data-no="Send oss objektnummer eller navn. Vi svarer med tilgjengelighet, transportmuligheter og neste steg."
-    data-tr="Bize obje numarasını veya adını gönderin. Uygunluk, taşıma seçenekleri ve sonraki adım hakkında dönüş yaparız.">
-    Send us the object number or name. We will reply with availability, transport options and the next step.
-  </p>
-  <a class="btn primary" href="mailto:akkanstudio@byggsmartkompetanse.no?subject=Akkan Studio request"
-     data-en="Send request"
-     data-no="Send forespørsel"
-     data-tr="İstek gönder">Send request</a>
-</section>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-<footer>
-  <p>© AKKAN STUDIO</p>
-</footer>
-
-<script>
-function setLanguage(lang) {
-  document.querySelectorAll("[data-" + lang + "]").forEach(el => {
-    el.textContent = el.getAttribute("data-" + lang);
-  });
-}
-</script>
-
+    renderProducts();
+  </script>
 </body>
-</html>
 </html>
