@@ -1,11 +1,86 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Akkan Studio</title>
-
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* Produktseksjon */
+.products {
+    padding: 80px 40px;
+    background: #050505;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 28px;
+    letter-spacing: 3px;
+    color: #c89b6b;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: #0b0b0b;
+    border: 1px solid rgba(200,155,107,0.2);
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #c89b6b;
+}
+
+.card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #c89b6b;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.unique {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #c89b6b;
+    color: #c89b6b;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.button:hover {
+    background: #c89b6b;
+    color: black;
+}
+</style>
+
 </head>
 
 <body>
@@ -16,30 +91,105 @@
         <a href="#">Home</a>
         <a href="#">Collection</a>
         <a href="#">About</a>
-        <a href="#">Process</a>
         <a href="#">Contact</a>
     </nav>
 </header>
 
 <section class="hero">
-    <div class="hero-content">
-        <h1>HANDCRAFTED DESIGN OBJECTS IN WOOD</h1>
-        <p>Unique pieces.<br>Made with passion and precision.</p>
-        <a href="#" class="btn">Discover Collection</a>
+    <h1>HANDCRAFTED DESIGN OBJECTS IN WOOD</h1>
+    <p>Each piece exists only once. Created with precision and intention.</p>
+</section>
+
+<section class="products">
+    <h2>UNIQUE COLLECTION</h2>
+
+```
+<div class="grid">
+
+    <div class="card">
+        <img src="images/backgammon.jpg">
+        <h3>Backgammon Heritage</h3>
+        <div class="unique">ONE OF ONE</div>
+        <p>Handcrafted wooden board with precision detailing.</p>
+        <a href="#" class="button">MAKE AN OFFER</a>
     </div>
-</section>
 
-<section class="features">
-    <div>Unikt håndverk</div>
-    <div>Massivt tre</div>
-    <div>Laget for hånd</div>
-    <div>Varig kvalitet</div>
-    <div>Internasjonalt uttrykk</div>
-</section>
+    <div class="card">
+        <img src="Jewelry Box.jpg">
+        <h3>Geometric Jewelry Chest</h3>
+        <div class="unique">ONLY PIECE IN EXISTENCE</div>
+        <p>Carved structure with layered geometric depth.</p>
+        <a href="#" class="button">MAKE AN OFFER</a>
+    </div>
 
-<footer>
-    © Akkan Studio
-</footer>
+    <div class="card">
+        <img src="Store Box.jpg">
+        <h3>Minimal Storage Box</h3>
+        <div class="unique">ONE OF ONE</div>
+        <p>Clean lines and warm wood tones.</p>
+        <a href="#" class="button">MAKE AN OFFER</a>
+    </div>
+
+    <div class="card">
+        <img src="Truck in wood.jpg">
+        <h3>Wood Transport Sculpture</h3>
+        <div class="unique">UNIQUE ART OBJECT</div>
+        <p>Functional craftsmanship meets artistic expression.</p>
+        <a href="#" class="button">MAKE AN OFFER</a>
+    </div>
+
+    <div class="card">
+        <img src="Wood Truck.JPG">
+        <h3>Classic Wooden Truck</h3>
+        <div class="unique">ONE OF ONE</div>
+        <p>Detailed handmade structure in solid wood.</p>
+        <a href="#" class="button">MAKE AN OFFER</a>
+    </div>
+
+    <div class="card">
+        <img src="Wall Clock 1.jpg">
+        <h3>Segment Clock I</h3>
+        <div class="unique">ONLY VERSION</div>
+        <p>Modern segmented design with strong visual identity.</p>
+        <a href="#" class="button">MAKE AN OFFER</a>
+    </div>
+
+    <div class="card">
+        <img src="Wall Clock 3.JPG">
+        <h3>Segment Clock II</h3>
+        <div class="unique">ONE OF ONE</div>
+        <p>Balanced geometry and handcrafted details.</p>
+        <a href="#" class="button">MAKE AN OFFER</a>
+    </div>
+
+    <div class="card">
+        <img src="Wall clock 2.JPG">
+        <h3>Rope Frame Clock</h3>
+        <div class="unique">UNIQUE PIECE</div>
+        <p>Combination of wood and rope elements.</p>
+        <a href="#" class="button">MAKE AN OFFER</a>
+    </div>
+
+    <div class="card">
+        <img src="Ceiling Lamp.jpg">
+        <h3>Floating Ring Lamp</h3>
+        <div class="unique">ONE OF ONE</div>
+        <p>Light sculpture with layered ring design.</p>
+        <a href="#" class="button">MAKE AN OFFER</a>
+    </div>
+
+    <div class="card">
+        <img src="Tea light Holders.JPG">
+        <h3>Tea Light Set</h3>
+        <div class="unique">ONLY SET</div>
+        <p>Warm wood candle holders in minimalist form.</p>
+        <a href="#" class="button">MAKE AN OFFER</a>
+    </div>
+
+</div>
+```
+
+</section>
 
 </body>
 </html>
